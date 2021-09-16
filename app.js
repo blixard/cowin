@@ -15,7 +15,8 @@ fetchStatus = ()=>{
     fetch(link)
     .then(response => response.json())
     .then(data =>{
-        // console.log(data)
+        console.log("fetched")
+        console.log(data)
         data.centers.forEach(element => {
             console.log(element.sessions)
             arr = element.sessions
