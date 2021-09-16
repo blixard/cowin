@@ -4,6 +4,7 @@
 var flag = false
 
 fetchStatus = ()=>{
+    console.log("entered here")
     var pinAndDate = window.location.href.split('?')[1];
     var pin = pinAndDate.split('&')[0].split('=')[1];
     var date = pinAndDate.split('&')[1].split('=')[1];
@@ -15,7 +16,7 @@ fetchStatus = ()=>{
     fetch(link)
     .then(response => response.json())
     .then(data =>{
-        console.log("fetched")
+        console.log("fetched") 
         console.log(data)
         data.centers.forEach(element => {
             console.log(element.sessions)
