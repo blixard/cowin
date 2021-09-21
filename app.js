@@ -23,10 +23,10 @@ fetchStatus = ()=>{
             arr = element.sessions
             element.sessions.forEach(item =>{
                 console.log(item.available_capacity)
-                document.getElementById("res").value = "available : " + item.available_capacity;
+                document.getElementById("res").innerHTML = "available : " + item.available_capacity;
                 if(item.available_capacity>1 && item.min_age_limit == 18 ){
                     alert("new vaccines")
-                    document.getElementById("res").value= "available : " + item.available_capacity + " age:" +item.min_age_limit;
+                    document.getElementById("res").innerHTML= "available : " + item.available_capacity + " age:" +item.min_age_limit;
                     console.log(item.available_capacity + " " +item.min_age_limit )
                 }
             })
@@ -39,9 +39,10 @@ fetchStatus = ()=>{
 
 window.addEventListener('load', function () {
     // Your document is loaded.
-    var fetchInterval = 10000; // 5 seconds.
+    var fetchInterval = 3000; // 5 seconds.
   
     // Invoke the request every 5 seconds.
+    
 
     setInterval(fetchStatus, fetchInterval);    
   });
